@@ -1,6 +1,7 @@
 package com.example.videoupload.controller;
 
 import com.example.videoupload.checklist.FileExtention;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.util.StringUtils;
@@ -15,12 +16,9 @@ import java.nio.file.Files;
 import java.util.Objects;
 
 @RestController
+@RequiredArgsConstructor
 public class FileUploadController {
     private final FileExtention fileExtention;
-
-    public FileUploadController(FileExtention fileExtention) {
-        this.fileExtention = fileExtention;
-    }
 
     @PostMapping("/upload")
     public ResponseEntity<String> handleFileUpload(@RequestParam("file") MultipartFile file) {

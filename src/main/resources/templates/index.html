@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>File Upload</title>
+  <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+</head>
+<body>
+<h1>File Upload</h1>
+<form action="/upload" method="post" enctype="multipart/form-data">
+  <label for="text-input">저장시 사용할 파일명 입력:</label>
+  <input type="text" id="text-input" name="fileName">
+  <br/><br/>
+  <label for="file-input"></label>
+  <input type="file" id="file-input" name="file">
+  <br/><br/>
+  <input type="submit" value="제출">
+</form>
+<!--<script src="../static/script.js"></script>-->
+<script type="text/javascript" th:src="@{/js/script.js}"></script>
+</body>
+</html>

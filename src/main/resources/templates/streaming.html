@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Video Streaming Example</title>
+  <meta charset="UTF-8">
+  <style>
+    #video-player {
+      width: 640px;
+      height: 360px;
+    }
+  </style>
+</head>
+<body>
+<div id="video-wrapper">
+  <video id="video-player" controls="controls" autoplay="autoplay">
+    <source th:src="${videoSrc}" type="video/mp4">
+<!--    <source src="../static/videos/samplevideo.mp4" type="video/mp4" >-->
+
+    Your browser does not support the video tag.
+  </video>
+  <div th:text="${msg}"> </div>
+</div>
+</body>
+</html>
+
+
